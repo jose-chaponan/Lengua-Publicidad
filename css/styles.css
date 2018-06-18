@@ -1,0 +1,64 @@
+@charset "UTF-8";
+@font-face { font-family: "Bariol Regular"; src: url("../fonts/BariolRegular.eot"); src: local("☺"), url("../fonts/BariolRegular.woff") format("woff"), url("../fonts/BariolRegular.ttf") format("truetype"), url("../fonts/BariolRegular.svg") format("svg"); font-weight: normal; font-style: normal; }
+* { font-weight: 100; }
+
+body { font-size: 1.6rem; font-family: "Bariol Regular"; color: #FFC600; line-height: 1; letter-spacing: 1px; }
+
+@media all and (min-width: 1px) { .oculta_movil { display: none; }
+  .slider_home { width: 100%; background-color: #000000; }
+  .slider_home .slide { height: 100vh; background-position: center center; background-size: 100%; background-repeat: no-repeat; }
+  .fondo_rojo { background-color: #FF173A; }
+  .about img { width: 50%; height: auto; }
+  .about p { font-size: 1.8rem; text-align: center; width: 70%; margin-top: 5vh; }
+  .portafolio { position: relative; min-height: 100vh; height: auto; display: grid; grid-gap: 0; grid-template-columns: repeat(6, 1fr); grid-template-rows: repeat(23, 50vh); }
+  .portafolio .trabajo { position: relative; border: 1px solid black; transition: all ease-in-out 0.4s; grid-column: span 6; }
+  .portafolio .trabajo article { position: absolute; top: 0; bottom: 0; left: 0; right: 0; background-color: rgba(0, 0, 0, 0.85); opacity: 0; transition: all ease-in-out 0.4s; }
+  .portafolio .trabajo article h3, .portafolio .trabajo article h4 { width: 100%; font-weight: 100; text-align: center; color: #ffffff; margin: 0; }
+  .portafolio .trabajo article h3 { font-size: 4rem; }
+  .portafolio .trabajo article h4 { margin-top: 2vh; font-size: 1.5rem; }
+  .portafolio .trabajo article a { background-color: #FFC600; color: #FF173A; border-radius: 20px; border: 2px solid #FFC600; display: block; margin: 0 auto; width: 7vw; text-align: center; margin-top: 2vh; padding: 0.7vh 0; font-size: 2.2rem; }
+  .portafolio .trabajo article a:hover { background-color: rgba(255, 198, 0, 0); color: #ffffff; }
+  .portafolio .trabajo article:hover { transition: all ease-in-out 0.4s; opacity: 1; }
+  .portafolio .image_port { background-size: auto 100%; background-position: center; background-repeat: no-repeat; }
+  .portafolio .trabajo:first-child, .portafolio .trabajo:nth-child(4), .portafolio .trabajo:nth-child(11), .portafolio .trabajo:nth-child(12), .portafolio .trabajo:nth-child(20), .portafolio .trabajo:nth-child(6), .portafolio .trabajo:nth-child(16), .portafolio .trabajo:nth-child(19), .portafolio .trabajo:nth-child(8), .portafolio .trabajo:nth-child(17), .portafolio .trabajo:nth-child(18), .portafolio .trabajo:nth-child(10) { grid-row: span 2; }
+  .portafolio .trabajo:nth-child(2), .portafolio .trabajo:nth-child(5), .portafolio .trabajo:nth-child(13), .portafolio .trabajo:nth-child(21), .portafolio .trabajo:nth-child(3), .portafolio .trabajo:nth-child(14), .portafolio .trabajo:nth-child(15), .portafolio .trabajo:nth-child(22), .portafolio .trabajo:nth-child(23), .portafolio .trabajo:nth-child(7), .portafolio .trabajo:nth-child(9) { grid-row: span 1; }
+  .contact form { width: 70%; }
+  .contact form label { font-size: 1.8rem; border-bottom: 1px solid #FFC600; padding: 2vh 0; width: 100%; display: block; }
+  .contact form label input[type="text"], .contact form label input[type="password"], .contact form label input[type="email"], .contact form label input[type="date"], .contact form label input[type="number"], .contact form label select, .contact form label textarea { background-color: rgba(255, 23, 58, 0); margin-left: 1vw; border: none; color: #ffffff; font-size: 1.6rem; width: 100%; padding: 0; }
+  .contact form input[type="submit"] { width: 100%; margin-top: 3vh; }
+  .contact form aside { width: 100%; margin-top: 3vh; display: block; text-align: center; }
+  .contact form aside a { display: inline-block; margin: 0 3vw; }
+  .contact form aside a svg { height: 5vh; }
+  .contact form .no-border { border-bottom: 0; }
+  .contact form textarea { width: 80%; background-color: rgba(255, 23, 58, 0); width: 100%; border: none; border-bottom: 1px solid #FFC600; color: #ffffff; font-size: 1.5rem; padding: 1vh 1vw; }
+  .boton { background-color: #FFC600; color: #FF173A; border-radius: 10px; padding: 1vh 0; border: 2px solid #FFC600; cursor: pointer; font-size: 1.8rem; }
+  .boton:hover { background-color: #FF173A; color: #FFC600; }
+  footer { background-color: #2A434A; font-size: 1.3rem; padding: 3vh 0; }
+  footer p { margin-right: 3vh; }
+  footer img { margin-left: 3vh; height: 5vh; } }
+@media all and (min-width: 1024px) { .oculta_movil { display: initial; }
+  .about img { width: 25%; }
+  .about p { width: 50%; font-size: 3.1rem; }
+  .portafolio { grid-template-rows: repeat(19, 50vh); }
+  .portafolio .trabajo:first-child, .portafolio .trabajo:nth-child(4), .portafolio .trabajo:nth-child(11), .portafolio .trabajo:nth-child(12), .portafolio .trabajo:nth-child(20) { grid-column: span 2; grid-row: span 2; }
+  .portafolio .trabajo:nth-child(2), .portafolio .trabajo:nth-child(5), .portafolio .trabajo:nth-child(13), .portafolio .trabajo:nth-child(21) { grid-column: span 4; grid-row: span 1; }
+  .portafolio .trabajo:nth-child(3), .portafolio .trabajo:nth-child(14), .portafolio .trabajo:nth-child(15), .portafolio .trabajo:nth-child(22), .portafolio .trabajo:nth-child(23) { grid-column: span 2; grid-row: span 1; }
+  .portafolio .trabajo:nth-child(6), .portafolio .trabajo:nth-child(16), .portafolio .trabajo:nth-child(19) { grid-column: span 6; grid-row: span 2; }
+  .portafolio .trabajo:nth-child(7), .portafolio .trabajo:nth-child(9) { grid-column: span 3; grid-row: span 1; }
+  .portafolio .trabajo:nth-child(8), .portafolio .trabajo:nth-child(17), .portafolio .trabajo:nth-child(18) { grid-column: span 3; grid-row: span 2; }
+  .portafolio .trabajo:nth-child(10) { grid-column: span 4; grid-row: span 2; }
+  .contact form { width: 35%; }
+  .contact form label { display: flex; font-size: 2.6rem; padding: 0 1vw; cursor: pointer; }
+  .contact form label input[type="text"], .contact form label input[type="password"], .contact form label input[type="email"], .contact form label input[type="date"], .contact form label input[type="number"], .contact form label select, .contact form label textarea { width: 75%; font-size: 2rem; padding: 1vh 0; }
+  .contact form textarea { font-size: 1.8rem; }
+  .contact form input[type="submit"] { width: 50%; }
+  .contact form aside { width: 40%; display: flex; }
+  .contact form aside a { margin: 0; }
+  .contact form aside a svg { transition: all ease-in-out 0.4s; }
+  .contact form aside a svg path { transition: all ease-in-out 0.4s; }
+  .contact form aside a:hover svg { transition: all ease-in-out 0.4s; }
+  .contact form aside a:hover svg path { transition: all ease-in-out 0.4s; fill: #FFC600; }
+  .contact form .no-border { border-bottom: 1px solid #FFC600; }
+  footer { font-size: 1.3rem; padding: 3vh 0; }
+  footer p { margin-right: 3vh; }
+  footer img { margin-left: 3vh; height: 5vh; } }

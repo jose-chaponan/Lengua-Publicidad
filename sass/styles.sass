@@ -1,0 +1,325 @@
+$color_rojo:        #FF173A
+$color_amarillo:    #FFC600
+$color_negro:       #000000
+$color_blanco:      #ffffff
+$color_gris:        #2A434A
+
+$fuente_principal:  'Bariol Regular'
+
+@import fonts
+
+*
+    font-weight: 100
+
+body
+    font-size: 1.6rem
+    font-family: $fuente_principal
+    color: $color_amarillo
+    line-height: 1
+    letter-spacing: 1px
+
+@media all and (min-width: 1px)
+    .oculta_movil
+        display: none
+
+    .slider_home
+        width: 100%
+        background-color: $color_negro
+        .slide
+            height: 100vh
+            background-position: center center
+            background-size: 100%
+            background-repeat: no-repeat
+
+    .fondo_rojo
+        background-color: $color_rojo
+
+    .about
+        img
+            width: 50%
+            height: auto
+        p
+            font-size: 1.8rem
+            text-align: center
+            width: 70%
+            margin-top: 5vh
+
+    .portafolio
+        position: relative
+        min-height: 100vh
+        height: auto
+        display: grid
+        grid-gap: 0
+        grid-template-columns: repeat(6, 1fr)
+        grid-template-rows: repeat(23, 50vh)
+        .trabajo
+            position: relative
+            border: 1px solid black
+            transition: all ease-in-out .4s
+            grid-column: span 6
+
+            article
+                position: absolute
+                top: 0
+                bottom: 0
+                left: 0
+                right: 0
+                background-color: rgba($color_negro, .85)
+                opacity: 0
+                transition: all ease-in-out .4s
+                h3,
+                h4
+                    width: 100%
+                    font-weight: 100
+                    text-align: center
+                    color: $color_blanco
+                    margin: 0
+                h3
+                    font-size: 4rem
+                h4
+                    margin-top: 2vh
+                    font-size: 1.5rem
+                a
+                    background-color: $color_amarillo
+                    color: $color_rojo
+                    border-radius: 20px
+                    border: 2px solid $color_amarillo
+                    display: block
+                    margin: 0 auto
+                    width: 7vw
+                    text-align: center
+                    margin-top: 2vh
+                    padding: .7vh 0
+                    font-size: 2.2rem
+                a:hover
+                    background-color: rgba($color_amarillo, 0)
+                    color: $color_blanco
+            article:hover
+                transition: all ease-in-out .4s
+                opacity: 1
+        .image_port
+            background-size: auto 100%
+            background-position: center
+            background-repeat: no-repeat
+        // .trabajo::before
+        //     transition: all ease-in-out .4s
+        //     content: ""
+        //     position: absolute
+        //     background-color: rgba($color_negro, .8)
+        //     top: 0
+        //     bottom: 0
+        //     left: 0
+        //     right: 0
+        //     opacity: 0
+        // .trabajo:hover::before
+        //     transition: all ease-in-out .4s
+        //     opacity: 1
+        // .fondo_rojo::before
+        //     opacity: 0!important
+
+        .trabajo:first-child,
+        .trabajo:nth-child(4),
+        .trabajo:nth-child(11),
+        .trabajo:nth-child(12),
+        .trabajo:nth-child(20),
+        .trabajo:nth-child(6),
+        .trabajo:nth-child(16),
+        .trabajo:nth-child(19),
+        .trabajo:nth-child(8),
+        .trabajo:nth-child(17),
+        .trabajo:nth-child(18),
+        .trabajo:nth-child(10)
+            grid-row: span 2
+
+        .trabajo:nth-child(2),
+        .trabajo:nth-child(5),
+        .trabajo:nth-child(13),
+        .trabajo:nth-child(21),
+        .trabajo:nth-child(3),
+        .trabajo:nth-child(14),
+        .trabajo:nth-child(15),
+        .trabajo:nth-child(22),
+        .trabajo:nth-child(23),
+        .trabajo:nth-child(7),
+        .trabajo:nth-child(9)
+            grid-row: span 1
+
+    .contact
+        form
+            width: 70%
+            label
+                font-size: 1.8rem
+                border-bottom: 1px solid $color_amarillo
+                padding: 2vh 0
+                width: 100%
+                display: block
+                input[type="text"],
+                input[type="password"],
+                input[type="email"],
+                input[type="date"],
+                input[type="number"],
+                select,
+                textarea
+                    background-color: rgba($color_rojo, 0)
+                    margin-left: 1vw
+                    border: none
+                    color: $color_blanco
+                    font-size: 1.6rem
+                    width: 100%
+                    padding: 0
+
+            input[type="submit"]
+                width: 100%
+                margin-top: 3vh
+
+            aside
+                width: 100%
+                margin-top: 3vh
+                display: block
+                text-align: center
+                a
+                    display: inline-block
+                    margin: 0 3vw
+                    svg
+                        height: 5vh
+
+            .no-border
+                border-bottom: 0
+            textarea
+                width: 80%
+                background-color: rgba($color_rojo, 0)
+                width: 100%
+                border: none
+                border-bottom: 1px solid $color_amarillo
+                color: $color_blanco
+                font-size: 1.5rem
+                padding: 1vh 1vw
+    .boton
+        background-color: $color_amarillo
+        color: $color_rojo
+        border-radius: 10px
+        padding: 1vh 0
+        border: 2px solid $color_amarillo
+        cursor: pointer
+        font-size: 1.8rem
+    .boton:hover
+        background-color: $color_rojo
+        color: $color_amarillo
+
+    footer
+        background-color: $color_gris
+        font-size: 1.3rem
+        padding: 3vh 0
+        p
+            margin-right: 3vh
+        img
+            margin-left: 3vh
+            height: 5vh
+
+@media all and (min-width: 1024px)
+    .oculta_movil
+        display: initial
+    .about
+        img
+            width: 25%
+        p
+            width: 50%
+            font-size: 3.1rem
+
+    .portafolio
+        grid-template-rows: repeat(19, 50vh)
+
+        .trabajo:first-child,
+        .trabajo:nth-child(4),
+        .trabajo:nth-child(11),
+        .trabajo:nth-child(12),
+        .trabajo:nth-child(20)
+            grid-column: span 2
+            grid-row: span 2
+
+        .trabajo:nth-child(2),
+        .trabajo:nth-child(5),
+        .trabajo:nth-child(13),
+        .trabajo:nth-child(21),
+            grid-column: span 4
+            grid-row: span 1
+
+        .trabajo:nth-child(3),
+        .trabajo:nth-child(14),
+        .trabajo:nth-child(15),
+        .trabajo:nth-child(22),
+        .trabajo:nth-child(23)
+            grid-column: span 2
+            grid-row: span 1
+
+        .trabajo:nth-child(6),
+        .trabajo:nth-child(16),
+        .trabajo:nth-child(19),
+            grid-column: span 6
+            grid-row: span 2
+
+        .trabajo:nth-child(7),
+        .trabajo:nth-child(9)
+            grid-column: span 3
+            grid-row: span 1
+
+        .trabajo:nth-child(8),
+        .trabajo:nth-child(17),
+        .trabajo:nth-child(18)
+            grid-column: span 3
+            grid-row: span 2
+
+        .trabajo:nth-child(10)
+            grid-column: span 4
+            grid-row: span 2
+
+    .contact
+        form
+            width: 35%
+            label
+                display: flex
+                font-size: 2.6rem
+                padding: 0 1vw
+                cursor: pointer
+                input[type="text"],
+                input[type="password"],
+                input[type="email"],
+                input[type="date"],
+                input[type="number"],
+                select,
+                textarea
+                    // background-color: red
+                    width: 75%
+                    font-size: 2rem
+                    padding: 1vh 0
+            textarea
+                font-size: 1.8rem
+            input[type="submit"]
+                width: 50%
+            aside
+                width: 40%
+                display: flex
+                a
+                    margin: 0
+                    svg
+                        transition: all ease-in-out .4s
+                        path
+                            transition: all ease-in-out .4s
+                a:hover
+                    svg
+                        transition: all ease-in-out .4s
+                        path
+                            transition: all ease-in-out .4s
+                            fill: $color_amarillo
+
+            .no-border
+                border-bottom: 1px solid $color_amarillo
+
+    footer
+        font-size: 1.3rem
+        padding: 3vh 0
+        p
+            margin-right: 3vh
+        img
+            margin-left: 3vh
+            height: 5vh
