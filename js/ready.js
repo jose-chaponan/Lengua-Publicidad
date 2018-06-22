@@ -1,4 +1,6 @@
 $(document).ready(function() {
+    AOS.init();
+    
     $(".slider_home").find(".slide").each(function(index, el) {
         var image_slide = $(this).data("image");
         $(this).css("background-image", "url("+image_slide+")");
