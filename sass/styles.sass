@@ -33,6 +33,8 @@ body
 
     .fondo_rojo
         background-color: $color_rojo
+    .fondo_amarillo
+        background-color: $color_amarillo
 
     .about
         img
@@ -51,13 +53,37 @@ body
         display: grid
         grid-gap: 0
         grid-template-columns: repeat(6, 1fr)
-        grid-template-rows: repeat(23, 50vh)
+        grid-template-rows: repeat(46, 55vw)
         .trabajo
             position: relative
-            border: 1px solid black
+            // border: 1px solid black
             transition: all ease-in-out .4s
             grid-column: span 6
-
+            .texto_fijo
+                position: absolute
+                right: 0
+                top: 0
+                bottom: 0
+                width: 43%
+                height: 100%
+                margin: auto
+                z-index: 99
+                a
+                    background-color: rgba($color_amarillo, 0)
+                    color: $color_amarillo
+                    border-radius: 20px
+                    border: 2px solid $color_amarillo
+                    display: block
+                    margin: 0
+                    width: 7vw
+                    min-width: 110px
+                    text-align: center
+                    margin-top: 2vh
+                    padding: .7vh 0
+                    font-size: 2.2rem
+                a:hover
+                    background-color: $color_amarillo
+                    color: $color_blanco
             article
                 position: absolute
                 top: 0
@@ -87,6 +113,7 @@ body
                     display: block
                     margin: 0 auto
                     width: 7vw
+                    min-width: 110px
                     text-align: center
                     margin-top: 2vh
                     padding: .7vh 0
@@ -97,26 +124,33 @@ body
             article:hover
                 transition: all ease-in-out .4s
                 opacity: 1
-        .image_port
-            background-size: auto 100%
-            background-position: center
-            background-repeat: no-repeat
-        // .trabajo::before
-        //     transition: all ease-in-out .4s
-        //     content: ""
-        //     position: absolute
-        //     background-color: rgba($color_negro, .8)
-        //     top: 0
-        //     bottom: 0
-        //     left: 0
-        //     right: 0
-        //     opacity: 0
-        // .trabajo:hover::before
-        //     transition: all ease-in-out .4s
-        //     opacity: 1
-        // .fondo_rojo::before
-        //     opacity: 0!important
 
+            .infoor
+                    position: absolute
+                    top: 0
+                    bottom: 0
+                    left: 0
+                    right: 0
+                    opacity: 0
+                    transition: all ease-in-out .4s
+                    p
+                        font-size: 2.2rem
+                        color: $color_rojo
+                        display: block
+                        width: 80%
+                        text-align: center
+                        margin: 1vh 0
+                        span
+                            text-align: center
+                            display: block
+                            width: 100%
+                            font-size: 1.7rem
+            .infoor:hover
+                transition: all ease-in-out .4s
+                opacity: 1
+            .fondo_rojo
+                p
+                    color: $color_amarillo
         .trabajo:first-child,
         .trabajo:nth-child(4),
         .trabajo:nth-child(11),
@@ -143,6 +177,59 @@ body
         .trabajo:nth-child(7),
         .trabajo:nth-child(9)
             grid-row: span 1
+
+    .image_port
+        background-size: 100%
+        background-position: center
+        background-repeat: no-repeat
+
+    .slider_portafolio
+        margin-bottom: 0
+        position: absolute
+        top: 0
+        bottom: 0
+        width: 100%
+        height: 100%
+        left: 0
+        right: 0
+        .image_port
+            display: flex
+            // background-color: cyan
+        .slick-dots
+            bottom: 0
+            top: 0
+            margin: auto 0
+            left: 2%
+            width: 3vw
+            height: 100%
+            display: flex
+            z-index: 80
+            li
+                display: block
+                width: 100%
+                height: 2vw
+                button
+                    width: .7vw
+                    height: .7vw
+                    margin: auto
+                    position: relative
+                button::before
+                    margin: auto
+                    right: 0
+                    color: rgba(0,0,0,0)
+                    border-radius: 50%
+                    border: 2px solid $color_rojo
+                    opacity: 1
+                    width: .7vw
+                    height: .7vw
+            .slick-active
+                button::before
+                    opacity: 1
+                    background-color: $color_amarillo
+                    border-color: $color_amarillo
+                    // color: $color_amarillo
+                    width: .7vw
+                    height: .7vw
 
     .contact
         form
@@ -272,6 +359,9 @@ body
         .trabajo:nth-child(10)
             grid-column: span 4
             grid-row: span 2
+
+        .image_port
+            background-size: 101%
 
     .contact
         form
