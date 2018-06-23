@@ -30,16 +30,61 @@ body
     .logo
         position: fixed
         top: 0
-        left: 20%
-        width: 6vw
+        left: 4%
+        width: 20vw
         z-index: 99
     .menu_tool
         position: fixed
         bottom: 20vh
         right: 0
-        z-index: 999
-        width: 4vw
-        cursor: pointer
+        z-index: 99
+        width: 13vw
+        // cursor: pointer
+        .right_bar
+            position: fixed
+            top: 0
+            bottom: 0
+            right: -15vw
+            width: 15vw
+            transition: all ease-in-out .4s
+            .team
+                background-color: $color_amarillo
+                width: 15vw
+                height: 15vw
+                position: fixed
+                margin: 0
+                top: 0
+                span
+                    display: block
+                    width: 100%
+                    color: $color_rojo
+                    transition: all ease-in-out .4s
+            .team:hover
+                background-color: $color_rojo
+                span
+                    color: $color_amarillo
+                    transition: all ease-in-out .4s
+
+            a
+                width: 100%
+                text-align: center
+                margin: 2vh 0
+                svg
+                    height: 1.5vw
+                    transition: all ease-in-out .4s
+                    path
+                        transition: all ease-in-out .4s
+            a:hover
+                svg
+                    transition: all ease-in-out .4s
+                    path
+                        transition: all ease-in-out .4s
+                        fill: $color_amarillo
+    .menu_tool:hover
+        .right_bar
+            right: 0
+
+
     .logo,
     .menu_tool
         img
@@ -47,6 +92,10 @@ body
 
     .oculta_movil
         display: none
+
+    #home
+        position: relative
+        margin-top: 0
 
     .slider_home
         width: 100%
@@ -63,6 +112,8 @@ body
         background-color: $color_amarillo
 
     .about
+        position: relative
+        z-index: 2
         img
             width: 50%
             height: auto
@@ -79,7 +130,7 @@ body
         display: grid
         grid-gap: 0
         grid-template-columns: repeat(6, 1fr)
-        grid-template-rows: repeat(46, 55vw)
+        grid-template-rows: repeat(36, 55vw)
         .trabajo
             position: relative
             // border: 1px solid black
@@ -93,7 +144,7 @@ body
                 width: 43%
                 height: 100%
                 margin: auto
-                z-index: 99
+                z-index: 90
                 a
                     background-color: rgba($color_amarillo, 0)
                     color: $color_amarillo
@@ -205,14 +256,14 @@ body
         .trabajo:nth-child(8),
         .trabajo:nth-child(17),
         .trabajo:nth-child(18),
-        .trabajo:nth-child(10)
+        .trabajo:nth-child(10),
+        .trabajo:nth-child(3)
             grid-row: span 2
 
         .trabajo:nth-child(2),
         .trabajo:nth-child(5),
         .trabajo:nth-child(13),
         .trabajo:nth-child(21),
-        .trabajo:nth-child(3),
         .trabajo:nth-child(14),
         .trabajo:nth-child(15),
         .trabajo:nth-child(22),
@@ -275,6 +326,8 @@ body
                     height: .7vw
 
     .contact
+        position: relative
+        z-index: 100
         form
             width: 70%
             label
@@ -340,15 +393,36 @@ body
         background-color: $color_gris
         font-size: 1.3rem
         padding: 3vh 0
+        position: relative
+        z-index: 101
+        .up
+            position: absolute
+            z-index: 10
+            right: 3vw
+            top: -8vh
+            width: 4vw
+            img
+                width: 100%
+                margin: 0
         p
-            margin-right: 3vh
+            text-align: center
+            margin-right: 3vw
+            margin-left: 3vw
         img
-            margin-left: 3vh
+            margin-left: auto
+            margin-right: auto
+            margin-bottom: 2vh
+            display: block
             height: 5vh
 
 @media all and (min-width: 1024px)
+    .logo
+        left: 19%
+        width: 6vw
+
     .oculta_movil
         display: initial
+
     .about
         img
             width: 25%
@@ -406,6 +480,19 @@ body
         .image_port
             background-size: 101%
 
+    .menu_tool
+        width: 4vw
+        .right_bar
+            width: 5vw
+            .team
+                background-color: $color_amarillo
+                width: 5vw
+                height: 5vw
+                span
+                    display: block
+                    width: 100%
+
+
     .contact
         form
             width: 35%
@@ -452,7 +539,11 @@ body
         font-size: 1.3rem
         padding: 3vh 0
         p
-            margin-right: 3vh
+            text-align: left
+            margin-right: 3vw
+            margin-left: 0
         img
-            margin-left: 3vh
+            margin-left: 3vw
+            margin-right: 0
+            margin-bottom: 0
             height: 5vh
